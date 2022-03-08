@@ -1,0 +1,24 @@
+.product {
+    width: 100%;
+    height: auto;
+    gap: 125px;
+}
+
+.ajustment {
+   margin-top: 165px;
+}
+
+.order {
+    order: 2;
+}
+
+#product-header-section {
+    @include flex(row, center, center);
+    letter-spacing: 1.42857px;
+    padding-block: 6.1rem;
+    h1 {
+        @include font(2.5rem, 2.8rem);
+        color: #FFFFFF;
+        text-transform: uppercase;
+    }
+}

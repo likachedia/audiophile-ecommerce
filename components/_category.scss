@@ -1,0 +1,98 @@
+
+.category {
+    display: flex;
+    gap: 1rem;
+    font-family: 'Manrope', sans-serif;
+}
+.category {
+    ul {
+        margin-top: 100px;
+        @include navigation-list;
+        gap: 1rem;
+        li {
+            position: relative;
+            flex: 1;
+        }
+    }
+}
+.category .item {
+    @include flex(column, end, center);
+    // height: 190px;
+    flex: 1;
+    background-color: #F1F1F1;
+    border-radius: 8px;
+    padding-top: 5.5rem;
+    padding-bottom: 1.375rem;
+}
+.item h6 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+/* identical to box height */
+    text-align: center;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+}
+// .item-img {
+//     position: absolute;
+//     bottom: 110px;
+//     position: absolute;
+//     left: 0; 
+//     right: 0; 
+//     margin-left: auto; 
+//     margin-right: auto; 
+//     width: 120px;
+//     /* background-image: url('assets/shared/desktop/image-category-thumbnail-headphones.png');
+//     height: auto; */
+// }
+
+.item-img {
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -38%);
+    width: 8.625rem;
+}
+.item-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.item-shop {
+    @include flex(row, center,center);
+    margin-bottom: 25px;
+    gap: 8px;
+}
+
+.item-shop p {
+    @include font(13px, 1.66rem);
+    flex: 1;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.item-shop img {
+    flex: 1;
+}
+@media only screen and (max-width: 480px) {
+    .category {
+        
+        ul {
+            gap: 5rem;
+            flex-direction: column;
+            margin-top: 5.75rem;
+        }        
+    }
+}
+
+// font-weight: var(--chakra-fontWeights-bold);
+// line-height: 1.66;
+// font-size: 0.8125rem;
+// color: var(--chakra-colors-text);
+// text-transform: uppercase;

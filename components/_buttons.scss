@@ -1,0 +1,45 @@
+button {
+    cursor: pointer;
+}
+
+@keyframes change {
+    0%   { margin-bottom:-30px;}
+    // 25%  { margin-left: 8px; margin-top:8px;}
+    // 50%  { margin-left:0px; margin-top:0px;}
+    // 75%  { margin-left:0px; margin-top:0px;}
+    100% {  margin-bottom:0px;}
+  }
+
+button:active {
+    // animation-name: change;
+    // animation-duration: 1s;
+    transform: translate(5px, 10px);
+}
+
+.button {
+    width: 168px;
+    height: 65px;
+    background-color: #D87D4A;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 22px;
+}
+
+.button2 {
+    width: 168px;
+    height: 65px;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 22px;
+}

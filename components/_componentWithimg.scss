@@ -1,0 +1,75 @@
+.component{
+    @include flex;
+    width: 100%;
+    gap: 3vw;
+
+    .text-div{
+        flex: 1;
+        @include flex(column, center, start);
+        h2 {
+            @include font(2.5rem, 2.8rem);
+            margin-bottom: 2.5rem;
+            span {
+                color: #D87D4A;
+            }
+        }
+
+        h4 {
+            @include font(14px, 19px, #D87D4A);
+            font-weight: normal;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+        p {
+            @include font(0.9rem, 1.5rem);
+            mix-blend-mode: normal;
+            opacity: 0.5;
+        }
+
+        button {
+            @include font(13px, 18px, #FFFFFF);
+            width: 168px;
+            height: 65px;
+            background-color: #D87D4A;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 22px;
+            border: 0;
+        }
+    }
+
+    // .div-with-img {
+    //     // flex: 1;
+    //     // img {
+    //     //     border-radius: 2%;
+    //     //     object-fit: cover;
+    //     //     width: 100%;
+    //     // }
+    //     @include div-img;
+    // }
+}
+
+.div-with-img {
+    @include div-img;
+}
+
+
+
+@media only screen and (max-width: 990px) {
+    .component {
+        @include flex(column);
+        .earphons-3 {
+            @include flex(row);
+        }
+    }
+    .div-with-img  {
+        order: 1;
+    }
+
+    .text-div {
+        order: 2;
+        @include flex(column, center, center);
+    }
+}
+

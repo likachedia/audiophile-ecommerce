@@ -1,0 +1,92 @@
+
+.product-page-features {
+    @include flex(column);
+    @include font(0.938rem, 1.563rem, #000000);
+    p {
+        opacity: 0.5;
+    }
+    gap: 7.5rem;
+    h1 {
+        @include font(2rem, 2.25rem);
+        text-transform: uppercase;
+        letter-spacing: 1.14286px;
+    }
+
+    .features {
+        @include flex(column);
+        gap: 1.5rem;
+    }
+
+    .in-the-box {
+        @include flex(column);
+        gap: 1.5rem;
+        li {
+            @include flex(row);
+            gap: 1.5rem;
+            list-style-type: none;
+            opacity: 0.5;
+            small {
+                color: #D87D4A;
+                opacity: 1;
+            }
+        }
+
+    }
+}
+
+.component-list {
+    @include font(1.5rem, 2.063rem, #000000);
+    text-align: center;
+    h3 {
+        margin-top: 2rem;
+        letter-spacing: 1.71429px;
+        text-transform: uppercase;
+    }
+    button {
+        margin-top: 2rem;
+        @include btn(#FFFFFF, #D87D4A);
+        border: none;
+    }
+    ul {
+        @include flex(column);
+        li {
+            padding-top: 3.5rem;
+            flex: 1;
+            list-style-type: none;
+        }
+    }
+}
+@media only screen and (min-width: 30em) {
+    .product-page-features {
+        .in-the-box {
+            @include flex(row);
+            // gap: 1.5rem;
+            h1 {
+                width: 320px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 61.875em) {
+    .product-page-features {
+        @include flex(row);
+
+        .features {
+            flex: 1;
+        }
+        .in-the-box {
+            flex: 1;
+            @include flex(column);
+            gap: 1.5rem;
+        }
+    }
+
+    .component-list {
+        ul{
+            @include flex;
+            gap: 0.688rem;
+        }
+    }
+}
+
+

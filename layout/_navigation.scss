@@ -1,0 +1,140 @@
+.nav {
+    @include flex(row, space-between, center);
+    /* padding-block: 30px; */
+    height: 90px;
+    width: 100%;
+    border-bottom: #585252 solid 1px;
+    position: relative;
+}
+
+.nav-list {
+    @include flex(row, center, center);
+    width: 100%;
+    list-style-type: none;
+}
+@keyframes border {
+    0%   {transition: border-width 0.6s linear;}
+    100% {transition: border-width 0.6s linear;}
+}
+.nav-list {
+    li {
+        padding-inline: 1rem;
+        border-bottom: 0px solid rgb(219, 41, 115);
+        transition: border-width 0.6s linear;
+        a {
+            @include font(13px, 18px, #FFFFFF);
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            // &:hover::after {
+            //     border-bottom: 2px solid rgb(219, 41, 115);
+            // }
+            &:hover {
+                color:#ce7510;
+            }
+        }
+        // &:hover {
+        //     @include font(13px, 18px, #ce7510);
+        //     border-width: 2px;
+        // }
+
+        // &:active {
+        //     @include font(13px, 18px, #ce7510);
+        // }
+    }
+} 
+
+#highlighted {
+    color:#ce7510;
+}
+
+.nav-list:first-child {
+    padding-left: 0;
+}
+#nav-first-item, #nav-last-item {
+    align-self: center;
+}
+#nav-last-item {
+    padding-right: 0.2rem; 
+}
+#nav-first-item {
+    a{
+        @include font(1.5rem, 18px, #FFFFFF);
+        padding-left: 5px;
+        list-style-type: none;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+}
+
+.icon {
+    display: none;
+}
+.fa-bars1 {
+    background-color: #FFFFFF;
+}
+.disply-ele {
+    display: none !important;
+}
+
+@keyframes menu {
+    0%   {top:0px;}
+    100% {top:90px;}
+}
+.nav-element {
+    width: 100%;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    z-index: 15;
+    animation-name: menu;
+    animation-duration: 0.5s;
+    background-color: #FFFFFF;
+    ul {
+        padding-inline: 1rem;
+        margin-bottom: 50px;
+    }
+}
+
+.transparent-background {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.4;
+    z-index: 11;
+}
+@media only screen and (max-width: 990px) {
+    #header-nav-list {
+        display: none;
+    }
+    .icon {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 480px) { 
+     #header-nav-list {
+        display: none;
+     }
+     .icon {
+        display: block;
+    }
+     #nav-first-item {
+         order: 1;
+     }
+
+     #nav-last-item {
+         order: 2;
+     }
+    .nav-list {
+        @include flex(column, center, center);
+
+        li {
+            padding-block: 0.5rem;
+        }
+    }
+}

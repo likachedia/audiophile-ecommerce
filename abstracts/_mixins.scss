@@ -1,0 +1,77 @@
+
+
+@mixin font($size: 14px, $l-height: 18px, $f-color: #000000) {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $size;
+    color: $f-color;
+    line-height: $l-height;
+}
+
+@mixin flex($direction: row, $justify: stretch, $align: stretch) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin title {
+    @include font(56px, 58px, #FFFFFF);
+    margin-top: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@mixin paragraph {
+    @include font(15px, 25px, rgb(136, 133, 133));
+    margin-block: 24px;
+    font-weight: 500;
+}
+
+@mixin paragraph-990px {
+    margin-inline-start: auto;
+    -webkit-margin-end: auto;
+    margin-inline-end: auto;
+    margin-bottom: 4.0625rem;
+}
+
+@mixin div-img {
+    flex: 1;
+    img {
+        border-radius: 2%;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+@mixin navigation-list {
+    @include flex(row, stretch, stretch);
+    width: 100%;
+    list-style-type: none;
+    li {
+        a{
+            @include font(13px, 18px, #FFFFFF);
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@mixin img-gallery {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.5rem;
+    height: 100%; 
+}
+
+@mixin btn($txt-color:#141211, $bg-color: transparent) {
+    @include font(13px, 18px, $txt-color);
+    width: 160px;
+    height: 48px;
+    background-color: $bg-color;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,240 @@
+
+main {
+    background-color: #FAFAFA;
+}
+.main-root {
+    width: 100%;
+    margin-block: 200px;
+    display: flex;
+    gap: 50px;
+}
+@media only screen and (max-width: 990px) {
+    .main-root {
+      flex-direction: column;
+    }
+}
+h2 {
+    @include font(32px, 36px);
+    letter-spacing: 1.14286px;
+    text-transform: uppercase;
+}
+
+.main-form {
+    @include flex(column, space-evenly);
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+    border: 1px solid #FFFFFF;
+    flex: 2;
+    display: flex;
+    padding: 1rem;
+}
+.biling-details {  
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+fieldset {
+    padding-top: 1rem;
+    margin-top: 2.6rem;
+    border: 0;
+    display: grid;
+    grid-auto-rows: 81px;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+}
+.biling-details  input,  
+.shoping-info  input,
+ #eMoney-number, 
+ #eMoney-pin{
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 56px;
+    border-radius: 5px;
+    border: 1px solid #CFCFCF;
+}
+
+input:active {    
+    border: 1px solid #D87D4A;
+}
+
+.input-addres {
+    grid-column: 1/-1;
+}
+
+.shoping-info {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+} 
+ 
+.input-e-money, .input-cash {
+    @include font;
+    @include flex(row, stretch, center);
+    padding-left: 8px;
+    height: 56px;
+    border-radius: 5px;
+    border: 1px solid #CFCFCF;
+    background-color: #FFFFFF;
+}
+
+.payment-details {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-areas: 
+    'h i1'
+    '. i2'
+    'i3 i4'
+    ;
+}
+
+.payment-details h6 {
+    grid-area: h;
+}
+.input-e-money {
+    grid-area: i1;
+}
+.input-cash {
+    margin-top: -16px;
+    grid-area: i2;
+}
+
+.input-eMoney-number {
+    grid-area: i3;
+}
+
+.input-eMoney-pin {
+    grid-area: i4;
+}
+
+@media only screen and (max-width: 30em) {
+    .payment-details {
+        grid-template-areas:
+            'h'
+            'i1'
+            'i2'
+            'i3'
+            'i4'
+        ;
+    }
+
+}
+legend {
+    @include font(13px, 25px, #D87D4A);
+    font-family: 'Manrope', sans-serif;    
+    letter-spacing: 0.928571px;
+    text-transform: uppercase;
+}
+
+label {
+    @include font(12px, 1rem, #000000);
+    letter-spacing: -0.214286px;
+}
+
+// .summary {
+//     @include flex(column);
+//     flex: 1;
+//     height: 612px;
+//     background-color: #FFFFFF;
+//     gap: 2vw;
+//     padding-inline: 3vw;
+// }
+// .summary h3 {
+//     @include font(18px, 25px, #000000);
+//     margin-top: 1rem;
+//     margin-bottom: 0.5rem;
+//     text-transform: uppercase;
+// }
+// .summary-item {
+//     @include flex(row, start);
+//     width: 100%;
+//     height: 62px;
+//     gap: 2.5vw;
+// }
+
+// .summary-item-img {
+//     width: 64px;
+//     height: 64px;
+// }
+// .summary-item-info {
+//     /* width: 60%; */
+//     @include flex(row, space-between, center);
+//     @include font(15px, 25px, #000000);
+//     flex: 1;
+// }
+// .summary-item-info span h3{
+//     margin-bottom: 0.5vh;
+// }
+
+// .summary-item-info {
+//     span{
+//         p {
+//             margin-top: 0.5vh;
+//             font-size: 14px;
+//             mix-blend-mode: normal;
+//             opacity: 0.5;
+//         }
+//     } 
+// }
+// .summary-p {
+//     margin-top: -3vw;
+//     text-align: right;
+//     mix-blend-mode: normal;
+//     opacity: 0.5;
+// }
+
+// .summary-item-img 
+// {
+//     img{
+//         border-radius: 5px;
+//         max-width: 100%;
+//         height: auto;
+//     }
+// }
+
+// .payment-info {
+//     margin-top: 0.5rem;
+//     @include flex(column);
+//     gap: 1.5vw;
+// }
+
+// .payment-info-list {
+//     @include flex(column);
+//     gap: 0.5vw;
+// }
+
+// .payment-info-list-item {
+//     /* padding-block: 0.5vw; */
+//     @include flex(row, space-between);
+//     @include font(15px, 25px, #000000);
+//     text-transform: uppercase;
+// }
+
+// .payment-info-list-item  {
+//     small {
+//         font-weight: bold;
+//         font-size: 18px;   
+//         text-align: right; 
+//     }
+// }
+
+// .payment-info-list-item {
+//     p {
+//         font-weight: 500;
+//         font-size: 15px;
+//         mix-blend-mode: normal;
+//         opacity: 0.5;
+//     }
+// } 
+
+// .total {
+//     margin-top: 0.4rem;
+// }
+
+// .summary{
+//     button {
+//         @include font(13px, 18px, #FFFFFF);
+//         width: 100%;
+//         height: 3rem;
+//         background-color: #D87D4A;
+//         border: 0;
+//         text-align: center;
+//         letter-spacing: 1px;
+//     }
+// }
+
