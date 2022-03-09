@@ -1,0 +1,14 @@
+.modal {
+    position: absolute;
+    inset: 25%;
+    @include flex;
+    padding: 1rem;
+    background-color: aquamarine;
+    border: 1px solid aquamarine;
+    border-radius: 0.5rem;
+}
+
+.choosen-product {
+    background-color: aquamarine;
+    border: 1px solid aquamarine; 
+}

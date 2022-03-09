@@ -1,0 +1,49 @@
+.display-absolute {
+    position: absolute;
+    top: 7.125rem;
+    right: 1.5rem;
+    z-index: 21;
+}
+
+.hide {
+    display: none;
+}
+.cart-title {
+    @include flex(row, space-between, center);
+
+    p {
+        @include font(0.875rem, 1,125rem);
+        text-decoration-line: underline;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+    }
+}
+.quantity-btn {
+    @include flex(row, stretch, center);
+    // -webkit-box-align: center;
+    background: #F1F1F1;
+    width: 6rem;
+    height: 2rem;
+}
+
+.quantity-btn {
+    .minus, .plus {
+        @include flex(row, center, center);
+        color: #000000;
+        font-size: 0.9375rem;
+        width: 40%;
+        background: #F1F1F1;
+        height: 100%;
+    }
+
+    .minus:hover, .plus:hover {
+        background: #d8d6d6;
+    }
+}
+
+
+.number {
+    @include flex(row, center, center);
+    font-size: 0.8125rem;
+    width: 20%;
+}
