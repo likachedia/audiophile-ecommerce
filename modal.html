@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="modal">
-        <div class="check">
+        <div class="modal_check">
             <i></i>
         </div>
         <h1>
@@ -18,10 +21,29 @@
             You will receive an email confirmation shortly.
         </p>
         <div class="choosen-product">
-            
+            <div class="product-card">
+                <div class="summary-item product-card_item">
+                    <div class="summary-item-img">
+                        <img src="assets/cart/image-xx99-mark-two-headphones.jpg" alt="headphones">
+                    </div>
+                    <div class="summary-item-info">
+                        <span>
+                            <h3>XX99 MK II</h3>
+                            <p>$ 2,999</p>
+                        </span>
+                        <p class="summary-p">x1</p>
+                    </div>
+                </div>
+                <p class="product-card_paragraph">and 2 other items</p>
+            </div>
+
+            <div class="payment-info-list-item choosen-product_total">
+                <p>total</p>
+                <small>$ 5,396</small>
+            </div>
         </div>
         <a href="home.html">
-            <button type="button">BACK TO HOME</button>
+            <button type="button" class="btn">BACK TO HOME</button>
         </a>
     </div>
 </body>

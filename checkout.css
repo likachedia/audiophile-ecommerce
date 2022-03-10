@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@200;300;500;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@200;300;500;800&display=swap');
 
 main {
     background-color: #F2F2F2;
@@ -22,7 +22,7 @@ font-style: normal;
 font-weight: bold;
 font-size: 32px;
 line-height: 36px;
-/* identical to box height, or 112% */
+
 
 letter-spacing: 1.14286px;
 text-transform: uppercase;
@@ -114,7 +114,6 @@ legend {
     font-weight: bold;
     font-size: 13px;
     line-height: 25px;
-    /* identical to box height, or 192% */
     
     letter-spacing: 0.928571px;
     text-transform: uppercase;
@@ -166,7 +165,6 @@ color: #000000;
     height: 64px;
 }
 .summary-item-info {
-    /* width: 60%; */
     flex: 1;
     display: flex;
     justify-content: space-between;
@@ -215,7 +213,6 @@ color: #000000;
 }
 
 .payment-info-list-item {
-    /* padding-block: 0.5vw; */
     display: flex;
     justify-content: space-between;
     line-height: 25px;
@@ -253,9 +250,8 @@ opacity: 0.5;
 font-weight: bold;
 font-size: 13px;
 line-height: 18px;
-/* identical to box height */
 
 text-align: center;
 letter-spacing: 1px;
 }
-
+ */

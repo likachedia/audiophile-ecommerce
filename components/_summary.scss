@@ -106,14 +106,3 @@
     margin-top: 0.4rem;
 }
 
-.summary{
-    button {
-        @include font(0.813rem, 1.125rem, #FFFFFF);
-        width: 100%;
-        height: 3rem;
-        background-color: #D87D4A;
-        border: 0;
-        text-align: center;
-        letter-spacing: 1px;
-    }
-}

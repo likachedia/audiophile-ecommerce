@@ -1,14 +1,118 @@
 .modal {
+    width: auto;
+    top: 114px;
     position: absolute;
-    inset: 25%;
-    @include flex;
-    padding: 1rem;
-    background-color: aquamarine;
+    @include flex(column);
+    padding: 1.5rem;
+    background-color: $color-white;
     border: 1px solid aquamarine;
     border-radius: 0.5rem;
+    z-index: 100;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    // width: 20.5rem;
+    width: 20.5rem;
+    &_item-info {
+
+    }
+
+    h1, p {
+        margin-top: 1.5rem;
+    }
+
+    p {
+        @include font(0.925rem, 1.575rem);
+        opacity: 0.5;
+    }
 }
 
+.product_titel {
+        @include font(0.925rem, 1.575rem);
+}
 .choosen-product {
-    background-color: aquamarine;
-    border: 1px solid aquamarine; 
+    margin-top: 1.5rem;
+    background-color: $color-gray;
+    border: 1px solid $color-gray;
+    border-radius: 0.5rem;
+    padding-bottom: 0;
+    @include flex(column);
+
+    &_total {
+        @include flex(column, start);
+        flex-basis: 40%;
+        background-color: $color-secondary;
+        width: 100%;
+        border-bottom: 1px solid $color-secondary;  
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding-inline: 1.5rem;
+        p {
+            color: $color-white;
+            margin-bottom: 0.5rem;
+        }
+
+        small {
+            color: $color-white;
+            text-align: left;
+            padding-bottom: 1.188rem;
+        }
+    }
+}
+
+.product-card {
+    @include flex(column);
+    margin-inline: 1.5rem;
+    padding-top: 1.5rem;
+    flex-basis: 60%;
+    &_item {
+        // flex-basis: 60%;
+    }
+    &_paragraph {
+        @include font(0.8rem, 1rem);
+        opacity: 0.5;
+        padding-top: 0.8rem;
+        padding-bottom: 1.5rem;
+        border-top: 1px solid black;
+        text-align: center;
+    }
+}
+
+.modal_check {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    border-radius: 50%;
+    @include flex(row, center, center);
+}
+
+.modal_check {
+    i {
+        @include flex(row, center, center);
+        filter: invert(100%) sepia(0%) saturate(1837%) hue-rotate(334deg) 
+        brightness(102%) contrast(100%);
+        img {
+            width: 50%;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 35em) {
+    .modal {
+        width: max-content;
+    }
+    .choosen-product {
+        @include flex(row);
+        &_total {
+            @include flex(column, center,center);
+            border-right: 1px solid $color-secondary;
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            border-bottom-left-radius: 0;
+        }
+    }
 }

@@ -1,6 +1,5 @@
 .nav {
     @include flex(row, space-between, center);
-    /* padding-block: 30px; */
     height: 90px;
     width: 100%;
     border-bottom: #585252 solid 1px;
@@ -26,21 +25,10 @@
             text-decoration: none;
             letter-spacing: 2px;
             text-transform: uppercase;
-            // &:hover::after {
-            //     border-bottom: 2px solid rgb(219, 41, 115);
-            // }
             &:hover {
                 color:#ce7510;
             }
         }
-        // &:hover {
-        //     @include font(13px, 18px, #ce7510);
-        //     border-width: 2px;
-        // }
-
-        // &:active {
-        //     @include font(13px, 18px, #ce7510);
-        // }
     }
 } 
 
@@ -90,8 +78,13 @@
     display: none;
 }
 .fa-bars1 {
-    background-color: #FFFFFF;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    filter: invert(100%) sepia(0%) saturate(1837%) hue-rotate(334deg) 
+    brightness(102%) contrast(100%);
 }
+
 .disply-ele {
     display: none !important;
 }

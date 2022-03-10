@@ -1,0 +1,80 @@
+header {
+    @include flex(row, center);
+    background-color:#0E0E0E;
+    background-repeat:repeat;
+    grid-area: h;
+    z-index: 20;
+}
+
+.header-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/home/desktop/image-hero.jpg'); 
+    /* background-image: url('assets/home/desktop/image-hero.jpg'); */
+    background-size: contain;
+    background-repeat:   no-repeat;
+    background-position: center;
+    height: 729px;
+}
+@media only screen and (max-width: 62em) {
+    .header-background {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/home/tablet/image-header.jpg');
+    }
+}
+
+@keyframes visible {
+    0%   {opacity: 0;}
+    25% {opacity: 0.2;}
+    50% { opacity: 0.5;}
+    75% { opacity: 0.7;}
+    100% { opacity: 1;}
+}
+.header-section {
+    @include flex(row, stretch, center);
+    flex: 1;
+    animation: visible 4s linear 0.2s;
+}
+@media only screen and (max-width: 62em) {
+    .header-section {
+        @include flex(row, center, center);
+    }
+}
+@media only screen and (max-width: 30em) {
+    .header-background {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/home/mobile/image-header.jpg');
+        height: 629px;
+    }
+
+    .header-section {
+        @include flex(row, center, center);
+    }
+}
+.sec-info {
+    @include font(1.5rem, 18px, #FFFFFF);
+    align-self: center;
+    /* bottom: 158px;
+    position: absolute; */
+    // width: 400px;
+    // height: 346px;
+    /* flex: 1; */
+}
+
+
+.sec-info {
+    h4 {
+        @include font(14px, 19px, rgb(136, 133, 133));
+        font-weight: normal;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+    }
+}
+
+.sec-info {
+    h1 {
+        @include title;
+    }
+}
+
+.sec-info {
+    p {
+        @include paragraph;
+    }
+}

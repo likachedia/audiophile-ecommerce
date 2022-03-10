@@ -34,13 +34,13 @@ body {
         ;
 }
 
-header {
-    @include flex(row, center);
-    background-color:#0E0E0E;
-    background-repeat:repeat;
-    grid-area: h;
-    z-index: 20;
-}
+// header {
+//     @include flex(row, center);
+//     background-color:#0E0E0E;
+//     background-repeat:repeat;
+//     grid-area: h;
+//     z-index: 20;
+// }
 
 .root {
     position: relative;
@@ -51,38 +51,38 @@ header {
 
 
 
-.header-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/home/desktop/image-hero.jpg'); 
-    /* background-image: url('assets/home/desktop/image-hero.jpg'); */
-    background-size: contain;
-    background-repeat:   no-repeat;
-    background-position: center;
-    height: 729px;
-}
-@media only screen and (max-width: 62em) {
-    .header-background {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/home/tablet/image-header.jpg');
-    }
-}
+// .header-background {
+//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/home/desktop/image-hero.jpg'); 
+//     /* background-image: url('assets/home/desktop/image-hero.jpg'); */
+//     background-size: contain;
+//     background-repeat:   no-repeat;
+//     background-position: center;
+//     height: 729px;
+// }
+// @media only screen and (max-width: 62em) {
+//     .header-background {
+//         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/home/tablet/image-header.jpg');
+//     }
+// }
 
-@media only screen and (max-width: 30em) {
-    .header-background {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/home/mobile/image-header.jpg');
-    }
-}
+// @media only screen and (max-width: 30em) {
+//     .header-background {
+//         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/home/mobile/image-header.jpg');
+//     }
+// }
 
-@keyframes visible {
-    0%   {opacity: 0;}
-    25% {opacity: 0.2;}
-    50% { opacity: 0.5;}
-    75% { opacity: 0.7;}
-    100% { opacity: 1;}
-}
-.header-section {
-    @include flex(row, stretch, center);
-    flex: 1;
-    animation: visible 4s linear 0.2s;
-}
+// @keyframes visible {
+//     0%   {opacity: 0;}
+//     25% {opacity: 0.2;}
+//     50% { opacity: 0.5;}
+//     75% { opacity: 0.7;}
+//     100% { opacity: 1;}
+// }
+// .header-section {
+//     @include flex(row, stretch, center);
+//     flex: 1;
+//     animation: visible 4s linear 0.2s;
+// }
 
 /* .hero-image img{
     background: url(img_man.jpg);
@@ -101,43 +101,45 @@ header {
     height: auto;
 } */
 
-.sec-info {
-    @include font(1.5rem, 18px, #FFFFFF);
-    align-self: center;
-    /* bottom: 158px;
-    position: absolute; */
-    width: 400px;
-    height: 346px;
-    /* flex: 1; */
-}
+// .sec-info {
+//     @include font(1.5rem, 18px, #FFFFFF);
+//     align-self: center;
+//     /* bottom: 158px;
+//     position: absolute; */
+//     width: 400px;
+//     height: 346px;
+//     /* flex: 1; */
+// }
 
 
-.sec-info {
-    h4 {
-        @include font(14px, 19px, rgb(136, 133, 133));
-        font-weight: normal;
-        letter-spacing: 10px;
-        text-transform: uppercase;
-    }
-}
+// .sec-info {
+//     h4 {
+//         @include font(14px, 19px, rgb(136, 133, 133));
+//         font-weight: normal;
+//         letter-spacing: 10px;
+//         text-transform: uppercase;
+//     }
+// }
 
-.sec-info {
-    h1 {
-        @include title;
-    }
-}
+// .sec-info {
+//     h1 {
+//         @include title;
+//     }
+// }
 
-.sec-info {
-    p {
-        @include paragraph;
-    }
-}
+// .sec-info {
+//     p {
+//         @include paragraph;
+//     }
+// }
+
 .jst-content {
     justify-content: space-around;
     gap: 170px;
 }
 
 main {
+    position: relative;
     @include flex(row, center,center);
     grid-area: m;
     border: 1px solid red;
@@ -313,17 +315,24 @@ main {
     margin-bottom: 200px;
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 62em) {
     .root {
         width: 60.375rem;
         padding-inline: 1.5rem;
     }
     .sec-info {
-        width: 380px;
-        height: 320px;
+            text-align: center;
+        // width: 380px;
+        // height: 320px;
         h1 {
             @include font(2.2rem, 2.5rem, #FFFFFF);
             letter-spacing: 1.28571px;
+        }
+
+        p{
+            max-width: 30ch; 
+            text-align: center;
+            align-self: center;
         }
     }
 
@@ -342,11 +351,15 @@ main {
 
     .sec-info {
         text-align: center;
-        width: 328px;
-        height: 290px;
         h1 {
             @include font(2.2rem, 2.5rem, #FFFFFF);
             letter-spacing: 1.28571px;
+        }
+
+        p{
+           max-width: 30ch; 
+           text-align: center;
+           align-self: center;
         }
     }
 }

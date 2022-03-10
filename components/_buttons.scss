@@ -20,7 +20,7 @@ button:active {
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-top: 1.375;
+    margin-top: 1.375rem;
 
     &:hover {
         cursor: pointer;
@@ -45,5 +45,9 @@ button:active {
             border: 1px solid $color-secondary;
             background-color: transparent;
         }
+    }
+
+    &_checkout {
+        width: 100%;
     }
 }
