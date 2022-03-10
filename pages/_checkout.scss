@@ -1,4 +1,6 @@
-
+input {
+    outline: none;
+}
 main {
     background-color: #FAFAFA;
 }
@@ -7,6 +9,7 @@ main {
     margin-block: 12.5rem;
     display: flex;
     gap: 3.125rem;
+
 }
 h2 {
     @include font(2rem, 2.25rem);
@@ -22,12 +25,18 @@ h2 {
     flex: 2;
     display: flex;
     padding: 1rem;
+        
+    input:active {    
+        border: 1px solid #D87D4A;
+    }
+
+    input:focus {    
+        border: 2px solid #D87D4A;
+    }
 }
 .biling-details, .shoping-info, .payment-details {  
     grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
 }
-
-
 
 fieldset {
     padding-top: 1rem;
@@ -45,12 +54,23 @@ fieldset {
     margin-top: 0.5rem;
     width: 100%;
     height:  3.5rem;
+    padding-left: 2rem;
     border-radius: 5px;
     border: 1px solid #CFCFCF;
+
+    &:focus {
+        border: 2px solid #D87D4A;
+        // background-color: aqua;
+    }
 }
 
-input:active {    
-    border: 1px solid #D87D4A;
+
+
+::-webkit-input-placeholder {
+    @include font(0.875rem, 1.188);
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    // padding-left: 2rem;
 }
 
 .input-addres {

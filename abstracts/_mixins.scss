@@ -1,6 +1,6 @@
 
 
-@mixin font($size: 14px, $l-height: 18px, $f-color: #000000) {
+@mixin font($size: 0.875rem, $l-height: 1.125rem, $f-color: #000000) {
     font-family: 'Manrope', sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -51,7 +51,7 @@
     list-style-type: none;
     li {
         a{
-            @include font(13px, 18px, #FFFFFF);
+            @include font(0.813rem, 1.125rem, $color-white);
             text-decoration: none;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -66,12 +66,41 @@
     height: 100%; 
 }
 
-@mixin btn($txt-color:#141211, $bg-color: transparent) {
-    @include font(13px, 18px, $txt-color);
-    width: 160px;
-    height: 48px;
-    background-color: $bg-color;
-    text-align: center;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+// @mixin btn($txt-color:#141211, $bg-color: transparent) {
+//     @include font(13px, 18px, $txt-color);
+//     width: 160px;
+//     height: 48px;
+//     background-color: $bg-color;
+//     text-align: center;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
+
+@mixin btn-number($btn-width:6rem, $btn-height: 2rem) {
+    @include flex(row, stretch, center);
+    // -webkit-box-align: center;
+    background: #F1F1F1;
+    width: $btn-width;
+    height:  $btn-height;
+    .minus, .plus {
+        @include flex(row, center, center);
+        color: #000000;
+        font-size: 0.9375rem;
+        width: 40%;
+        background: $color-helper;
+        height: 100%;
+        border: none;
+    }
+
+    .minus:hover, .plus:hover {
+        background: #d8d6d6;
+        border: none;
+        color: $color-primary;
+    }
+
+    .number {
+        @include flex(row, center, center);
+        font-size: 0.8125rem;
+        width: 20%;
+    }
 }

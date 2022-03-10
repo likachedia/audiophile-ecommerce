@@ -68,7 +68,29 @@ img {
 }
 
 #nav-last-item {
+  position: relative;
   padding-right: 0.2rem;
+}
+
+#nav-last-item::before {
+  position: absolute;
+  content: attr(data-before);
+  text-align: center;
+  width: 1rem;
+  height: 1rem;
+  background-color: #D87D4A;
+  border: 1px solid #D87D4A;
+  opacity: 0.9;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.7rem;
+  color: #000000;
+  line-height: 1.125rem;
+  color: #FFFFFF;
+  border-radius: 50%;
+  top: -10px;
+  left: 15px;
 }
 
 #nav-first-item a {
@@ -131,6 +153,11 @@ img {
   z-index: 11;
 }
 
+@media only screen and (min-width: 990px) {
+  .nav-element {
+    display: none !important;
+  }
+}
 @media only screen and (max-width: 990px) {
   #header-nav-list {
     display: none;
@@ -357,42 +384,51 @@ button {
 
 @keyframes change {
   0% {
-    margin-bottom: -30px;
+    margin-bottom: -1.875rem;
   }
   100% {
-    margin-bottom: 0px;
+    margin-bottom: 0rem;
   }
 }
 button:active {
   transform: translate(5px, 10px);
 }
 
-.button {
-  width: 168px;
-  height: 65px;
+.btn {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.813rem;
+  color: #FFFFFF;
+  line-height: 1.125rem;
+  width: 10rem;
+  height: 3rem;
+  border: none;
   background-color: #D87D4A;
-  color: #fff;
   text-align: center;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 18px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-top: 22px;
+  margin-top: 1.375;
 }
-
-.button2 {
-  width: 168px;
-  height: 65px;
+.btn:hover {
+  cursor: pointer;
+  background-color: #FBAF85;
+}
+.btn--transfarent {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #000000;
+}
+.btn--transfarent:hover {
   background-color: #000000;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 18px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-top: 22px;
+  color: #FFFFFF;
+}
+.btn--black {
+  background-color: #000000;
+}
+.btn--black:hover {
+  border: 1px solid #000000;
+  background-color: transparent;
 }
 
 .summary {
@@ -587,24 +623,52 @@ button:active {
   mix-blend-mode: normal;
   opacity: 0.5;
 }
-.component .text-div button {
-  font-family: "Manrope", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  color: #FFFFFF;
-  line-height: 18px;
-  width: 168px;
-  height: 65px;
-  background-color: #D87D4A;
-  text-align: center;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-top: 22px;
-  border: 0;
+
+#btn-wraper {
+  margin-top: 1.375rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#btn-wraper .pr-quantity-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+  background: #F1F1F1;
+  width: 7.5rem;
+  height: 3rem;
+}
+#btn-wraper .pr-quantity-btn .minus, #btn-wraper .pr-quantity-btn .plus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-size: 0.9375rem;
+  width: 40%;
+  background: #F1F1F1;
+  height: 100%;
+  border: none;
+}
+#btn-wraper .pr-quantity-btn .minus:hover, #btn-wraper .pr-quantity-btn .plus:hover {
+  background: #d8d6d6;
+  border: none;
+  color: #D87D4A;
+}
+#btn-wraper .pr-quantity-btn .number {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8125rem;
+  width: 20%;
 }
 
 .div-with-img {
+  flex: 1;
   flex: 1;
 }
 .div-with-img img {
@@ -613,7 +677,7 @@ button:active {
   width: 100%;
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 62em) {
   .component {
     display: flex;
     flex-direction: column;
@@ -627,6 +691,17 @@ button:active {
     align-items: stretch;
   }
 
+  .product-with-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+  .product-with-info .div-with-img img {
+    width: 100%;
+    object-fit: cover;
+  }
+
   .div-with-img {
     order: 1;
   }
@@ -637,6 +712,22 @@ button:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+@media only screen and (max-width: 35em) {
+  .component .text-div h2 {
+    font-size: 2.2rem;
+  }
+  .component .text-div .btn--sm {
+    width: 9rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .product-with-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
   }
 }
 .category {
@@ -659,9 +750,9 @@ button:active {
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 0.813rem;
   color: #FFFFFF;
-  line-height: 18px;
+  line-height: 1.125rem;
   text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -684,14 +775,15 @@ button:active {
 }
 
 .item h6 {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
-  /* identical to box height */
+  font-size: 1.125rem;
+  color: #000000;
+  line-height: 1.563rem;
   text-align: center;
   letter-spacing: 1.28571px;
   text-transform: uppercase;
-  color: #000000;
   margin-bottom: 20px;
 }
 
@@ -732,12 +824,21 @@ button:active {
   mix-blend-mode: normal;
   opacity: 0.5;
 }
-
 .item-shop img {
   flex: 1;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 580px) {
+  .item h6 {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000000;
+    line-height: 1.125rem;
+  }
+}
+@media only screen and (max-width: 30em) {
   .category ul {
     gap: 5rem;
     flex-direction: column;
@@ -880,7 +981,6 @@ button:active {
   width: 6rem;
   height: 2rem;
 }
-
 .quantity-btn .minus, .quantity-btn .plus {
   display: flex;
   flex-direction: row;
@@ -891,12 +991,14 @@ button:active {
   width: 40%;
   background: #F1F1F1;
   height: 100%;
+  border: none;
 }
 .quantity-btn .minus:hover, .quantity-btn .plus:hover {
   background: #d8d6d6;
+  border: none;
+  color: #D87D4A;
 }
-
-.number {
+.quantity-btn .number {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -945,6 +1047,7 @@ header {
 }
 
 .root {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -962,6 +1065,16 @@ header {
   height: 729px;
 }
 
+@media only screen and (max-width: 62em) {
+  .header-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/home/tablet/image-header.jpg");
+  }
+}
+@media only screen and (max-width: 30em) {
+  .header-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/home/mobile/image-header.jpg");
+  }
+}
 @keyframes visible {
   0% {
     opacity: 0;
@@ -1028,22 +1141,6 @@ height: 632px; */
   font-weight: normal;
   letter-spacing: 10px;
   text-transform: uppercase;
-}
-
-.sec-info button {
-  font-family: "Manrope", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  color: #FFFFFF;
-  line-height: 18px;
-  width: 168px;
-  height: 65px;
-  background-color: #D87D4A;
-  text-align: center;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-top: 22px;
 }
 
 .sec-info h1 {
@@ -1151,21 +1248,6 @@ main {
   font-weight: 500;
   max-width: 36ch;
 }
-.speaker-info button {
-  font-family: "Manrope", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  color: #FFFFFF;
-  line-height: 18px;
-  width: 168px;
-  height: 65px;
-  background-color: #141211;
-  text-align: center;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-top: 22px;
-}
 
 @media only screen and (max-width: 990px) {
   .wraper {
@@ -1247,20 +1329,6 @@ main {
   margin-bottom: 2rem;
   letter-spacing: 2px;
 }
-.text-div-btn button {
-  font-family: "Manrope", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  color: #141211;
-  line-height: 18px;
-  width: 160px;
-  height: 48px;
-  background-color: transparent;
-  text-align: center;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
 
 .align-absolute {
   position: absolute;
@@ -1313,7 +1381,13 @@ main {
     letter-spacing: 1.28571px;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 33.125em) {
+  .root {
+    width: 27.375rem;
+    padding-inline: 0.5rem;
+  }
+}
+@media only screen and (max-width: 30em) {
   .root {
     width: 27.375rem;
     padding-inline: 1.5rem;
@@ -1334,6 +1408,10 @@ main {
     letter-spacing: 1.28571px;
   }
 }
+input {
+  outline: none;
+}
+
 main {
   background-color: #FAFAFA;
 }
@@ -1368,6 +1446,12 @@ h2 {
   display: flex;
   padding: 1rem;
 }
+.main-form input:active {
+  border: 1px solid #D87D4A;
+}
+.main-form input:focus {
+  border: 2px solid #D87D4A;
+}
 
 .biling-details, .shoping-info, .payment-details {
   grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
@@ -1390,12 +1474,26 @@ fieldset {
   margin-top: 0.5rem;
   width: 100%;
   height: 3.5rem;
+  padding-left: 2rem;
   border-radius: 5px;
   border: 1px solid #CFCFCF;
 }
+.biling-details input:focus,
+.shoping-info input:focus,
+#eMoney-number:focus,
+#eMoney-pin:focus {
+  border: 2px solid #D87D4A;
+}
 
-input:active {
-  border: 1px solid #D87D4A;
+::-webkit-input-placeholder {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #000000;
+  line-height: 1.188;
+  mix-blend-mode: normal;
+  opacity: 0.4;
 }
 
 .input-addres {
@@ -1406,9 +1504,9 @@ input:active {
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #000000;
-  line-height: 18px;
+  line-height: 1.125rem;
   display: flex;
   flex-direction: row;
   justify-content: stretch;
@@ -1489,7 +1587,7 @@ label {
 .product {
   width: 100%;
   height: auto;
-  gap: 125px;
+  gap: 6.25vw;
 }
 
 .ajustment {
@@ -1589,19 +1687,6 @@ label {
 }
 .component-list button {
   margin-top: 2rem;
-  font-family: "Manrope", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  color: #FFFFFF;
-  line-height: 18px;
-  width: 160px;
-  height: 48px;
-  background-color: #D87D4A;
-  text-align: center;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border: none;
 }
 .component-list ul {
   display: flex;

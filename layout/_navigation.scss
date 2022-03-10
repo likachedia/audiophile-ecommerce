@@ -55,8 +55,27 @@
     align-self: center;
 }
 #nav-last-item {
+    position: relative;
     padding-right: 0.2rem; 
 }
+
+#nav-last-item::before {
+    position: absolute;
+    content: attr(data-before);
+    text-align: center;
+    width: 1rem;
+    height: 1rem;
+    background-color: #D87D4A;
+    border: 1px solid #D87D4A;
+    opacity: 0.9;
+    @include font(0.7rem);
+    color: #FFFFFF;
+    border-radius: 50%;
+    top: -10px;
+    left: 15px;
+}
+
+
 #nav-first-item {
     a{
         @include font(1.5rem, 18px, #FFFFFF);
@@ -106,6 +125,12 @@
     background-color: #000;
     opacity: 0.4;
     z-index: 11;
+}
+
+@media only screen and (min-width: 990px) {
+    .nav-element {
+        display: none !important;
+    }
 }
 @media only screen and (max-width: 990px) {
     #header-nav-list {

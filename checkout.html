@@ -12,86 +12,7 @@
 <body>
     <div class="container">
         <header class="">
-            <div class="summary  display-absolute disply-ele" id="cart-item">
-                <div class="cart-title">
-                    <h3>cart (3)</h3>
-                    <p>Remove all</p>
-                </div>               
-                <div class="summary-item">
-                    <div class="summary-item-img">
-                        <img src="assets/shared/desktop/image-xx99-mark-two-headphones.jpg" alt="headphones">
-                    </div>
-                    <div class="summary-item-info">
-                        <span>
-                            <h3>XX99 MK II</h3>
-                            <p>$ 2,999</p>
-                        </span>
-                        <div class="quantity-btn">
-                            <button type="button" class="minus">-</button>
-                            <div class="number">1</div>
-                            <button type="button" class="plus">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="summary-item">
-                    <div class="summary-item-img">
-                        <img src="assets/shared/desktop/image-xx59-headphones.jpg" alt="headphones">
-                    </div>
-                    <div class="summary-item-info">
-                        <span>
-                            <h3>XX59</h3>
-                            <p>$ 899</p>
-                        </span>
-                        <div class="quantity-btn">
-                            <button type="button" class="minus">-</button>
-                            <div class="number">1</div>
-                            <button type="button" class="plus">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="summary-item">
-                    <div class="summary-item-img">
-                        <img src="assets/shared/desktop/image-xx99-mark-one-headphones.jpg" alt="headphones">
-                    </div>
-                    <div class="summary-item-info">
-                        <span>
-                            <h3>YX1</h3>
-                            <p>$ 599</p>
-                        </span>
-                        <div class="quantity-btn">
-                            <button type="button" class="minus">-</button>
-                            <div class="number">1</div>
-                            <button type="button" class="plus">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="payment-info">
-                    <div class="payment-info-list" style="display: none;">
-                        <div class="payment-info-list-item">
-                            <p>total</p>
-                            <small>$ 5,396</small>
-                        </div>
-                        <div class="payment-info-list-item">
-                            <p>shipping</p>
-                            <small>$ 5,396</small>
-                        </div>
-                        <div class="payment-info-list-item">
-                            <p>vat</p>
-                            <small>$ 5,396</small>
-                        </div>
-                    </div>
-                    <div class="total">
-                        <div class="payment-info-list-item">
-                            <p>total</p>
-                            <small>$ 5,396</small>
-                        </div>
-                    </div>
-                </div>
-                <a href="checkout.html">
-                    <button type="button">CHECKOUT</button>
-                </a>
-                     
-            </div>
+
             <div class="category nav-element disply-ele" id="category-nav">
               <ul>
                 <li>
@@ -154,6 +75,54 @@
               </ul>
             </div>
             <div class="root">
+                <div class="summary  display-absolute disply-ele" id="cart-item">
+                    <div class="cart-title">
+                        <h3>cart (3)</h3>
+                        <p>Remove all</p>
+                    </div>               
+                    <div class="summary-item">
+                        <div class="summary-item-img">
+                            <img src="assets/shared/desktop/image-xx99-mark-two-headphones.jpg" alt="headphones">
+                        </div>
+                        <div class="summary-item-info">
+                            <span>
+                                <h3>XX99 MK II</h3>
+                                <p>$ 2,999</p>
+                            </span>
+                            <div class="quantity-btn">
+                                <button type="button" class="minus">-</button>
+                                <div class="number">1</div>
+                                <button type="button" class="plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-info">
+                        <div class="payment-info-list" style="display: none;">
+                            <div class="payment-info-list-item">
+                                <p>total</p>
+                                <small>$ 5,396</small>
+                            </div>
+                            <div class="payment-info-list-item">
+                                <p>shipping</p>
+                                <small>$ 5,396</small>
+                            </div>
+                            <div class="payment-info-list-item">
+                                <p>vat</p>
+                                <small>$ 5,396</small>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <div class="payment-info-list-item">
+                                <p>total</p>
+                                <small>$ 5,396</small>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="checkout.html">
+                        <button type="button">CHECKOUT</button>
+                    </a>
+                         
+                </div>
               <nav class="nav">
                 <span class="icon">
                   <i class="fa fa-bars fa-bars1"></i>
@@ -184,16 +153,16 @@
                           <legend>Biling details:</legend>
                           <div class="input-name">
                             <label for="name">Name:</label><br>
-                            <input type="text" id="name" name="name">
+                            <input type="text" id="name" name="name" placeholder="Alexei Ward">
                           </div>
                           <div class="input-email">
                             <label for="email">Email</label><br>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email" placeholder="alexei@mail.com">
                           </div>
 
                           <div class="input-phone-number">
                             <label for="phone-number">Phone Number</label><br>
-                            <input type="number" id="phone-number" name="phone-number">
+                            <input type="number" id="phone-number" name="phone-number" placeholder="+1 202-555-0136">
                           </div>
 
                         </fieldset>
@@ -202,19 +171,19 @@
                             <legend>Shoping info</legend>
                             <div class="input-addres">
                                 <label for="addres">Addres</label><br>
-                                <input type="text" id="addres" name="addres"><br><br>
+                                <input type="text" id="addres" name="addres" placeholder="1137 Williams Avenue"><br><br>
                             </div>
                             <div class="input-zip-code">
                                 <label for="zip-code">Zip code</label><br>
-                                <input type="number" id="zip-code" name="zip-code"><br><br>
+                                <input type="number" id="zip-code" name="zip-code" placeholder="10001"><br><br>
                             </div>
                             <div class="input-city">
                                 <label for="city">City</label><br>
-                                <input type="text" id="city" name="city"><br><br>
+                                <input type="text" id="city" name="city"  placeholder="New York"><br><br>
                             </div>
                             <div class="input-country">
                                 <label for="country">Country</label><br>
-                                <input type="text" id="country" name="country"><br><br>
+                                <input type="text" id="country" name="country" placeholder="United States"><br><br>
                             </div>
                         </fieldset>
 
@@ -233,11 +202,11 @@
                             </div>
                             <div class="input-eMoney-number">
                                 <label for="eMoney-number">e-Money Number</label><br>
-                                <input type="number" id="eMoney-number" name="eMoney-number"><br><br>
+                                <input type="number" id="eMoney-number" name="eMoney-number" placeholder="238521993"><br><br>
                             </div>
                             <div class="input-eMoney-pin">
                                 <label for="eMoney-pin">e-Money Pin</label><br>
-                                <input type="number" id="eMoney-pin" name="eMoney-pin"><br><br>
+                                <input type="number" id="eMoney-pin" name="eMoney-pin" placeholder="6891"><br><br>
                             </div>
                         </fieldset>
                     </form>

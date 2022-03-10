@@ -1,7 +1,7 @@
 
 .product-page-features {
     @include flex(column);
-    @include font(0.938rem, 1.563rem, #000000);
+    @include font(0.938rem, 1.563rem, $color-secondary);
     p {
         opacity: 0.5;
     }
@@ -26,7 +26,7 @@
             list-style-type: none;
             opacity: 0.5;
             small {
-                color: #D87D4A;
+                color: $color-primary;
                 opacity: 1;
             }
         }
@@ -35,7 +35,7 @@
 }
 
 .component-list {
-    @include font(1.5rem, 2.063rem, #000000);
+    @include font(1.5rem, 2.063rem, $color-secondary);
     text-align: center;
     h3 {
         margin-top: 2rem;
@@ -44,8 +44,6 @@
     }
     button {
         margin-top: 2rem;
-        @include btn(#FFFFFF, #D87D4A);
-        border: none;
     }
     ul {
         @include flex(column);

@@ -1,9 +1,13 @@
 .product {
     width: 100%;
     height: auto;
-    gap: 125px;
+    gap: 6.25vw;
 }
-
+@media only screen and (max-width: 35em) { 
+    // .product {
+    //     gap: 5px;
+    // }
+}
 .ajustment {
    margin-top: 165px;
 }
